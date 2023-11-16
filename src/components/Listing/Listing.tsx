@@ -18,7 +18,7 @@ interface ListItemsProps{
   items: Item[]
 }
 
-export const Listing = ({ items }: ListItemsProps) => {
+export const Listing = ({ items = [] }: ListItemsProps) => {
   return (
     <div className="item-list">
       {items.map(item => <ListItem key={item.listing_id} {...item}/>)}
